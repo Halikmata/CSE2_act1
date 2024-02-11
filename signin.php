@@ -60,10 +60,11 @@
             <input type="text" id="hobbies" name="hobbies" required>
 
             <label for="signupPassword">Password:</label>
-            <input type="password" id="signupPassword" name="signupPassword" pattern="^(?=.*[0-9])(?=.*[!@#$%^&*_+=-])[A-Za-z0-9!@#$%^&*_+=-]{4,}$" title="Password must be at least 4 characters long and include a number and a special character" required>
+            <input type="password" id="signupPassword" name="signupPassword" required>
 
             <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <input type="password" id="confirmPassword" name="confirmPassword" pattern="^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*_+=-])[A-Za-z0-9!@#$%^&*_+=-]$" title="Password must be at least 4 characters long and include a letter, a number, and a special character" minlength="4" required>
+            
 
             <button type="submit" id="signupSubmitButton" disabled>Sign Up</button>
             <p>Already have an account? <a href="#" onclick="toggleForm('loginForm')">Log-in here</a></p>
